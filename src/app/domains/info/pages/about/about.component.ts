@@ -13,7 +13,7 @@ import { WaveAudioComponent } from '@info/components/wave-audio/wave-audio.compo
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent {
+export default class AboutComponent {
   duration = signal(1000);
   message = signal('Hola');
 

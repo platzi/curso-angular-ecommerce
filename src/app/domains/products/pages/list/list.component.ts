@@ -16,7 +16,7 @@ import { Category } from '@shared/models/category.model';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class ListComponent {
+export default class ListComponent {
 
   products = signal<Product[]>([]);
   categories = signal<Category[]>([]);
