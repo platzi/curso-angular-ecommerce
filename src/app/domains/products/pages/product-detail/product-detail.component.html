@@ -9,14 +9,16 @@
       </div>
       <div class="flex items-center justify-center mt-1">
         <div class="grid grid-cols-3 gap-1">
-          <img
+          @for (img of product()?.images; track img) {
+  <img
             alt="ecommerce"
             class="object-cover object-center rounded border-2 border-gray-200"
-            *ngFor="let img of product()?.images"
+           
             [src]="img"
             (click)="changeCover(img)"
             [class.border-red-400]="img === cover()"
           />
+}
         </div>
       </div>
     </div>

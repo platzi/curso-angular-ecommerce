@@ -88,13 +88,15 @@
     </button>
   </div>
   <div class="pt-4 flex flex-col">
-    <div class="flex justify-between items-center space-y-2" *ngFor="let product of cart()">
+    @for (product of cart(); track product) {
+  <div class="flex justify-between items-center space-y-2">
       <div class="flex space-x-2 items-center">
         <img class="w-6 h-6" [src]="product.images[0]" [alt]="product.title">
         <h3>{{ product.title }}</h3>
       </div>
       <p>{{ product.price }}</p>
     </div>
+}
     <div>
       <p>Total: {{ total() }}</p>
     </div>
